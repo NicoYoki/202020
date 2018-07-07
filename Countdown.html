@@ -1,13 +1,13 @@
 <html>
 <head>
+<style>
+</style>
 <script type="text/javascript">
 const time = 1200
 const relax_time = 20
 var c = time
 var d = relax_time
 var t
-//初始化文本框内容为20，需添加两个文本框，改成3个20堆叠形式
-document.getElementById('txt').value = "20"
 function timedCount()
 {
     min = parseInt(c / 60)
@@ -56,22 +56,15 @@ function timedCountrelax()
     }
     t=setTimeout("timedCountrelax()",1000)
 }
-timedCount()
+
 </script>
 </head>
-
-<body>
+<!--自动执行-->
+<body onload = "javascript:{this.disabled = true;timedCount()}">
 <form>
 <center>
-<!--鼠标悬停-->
-<a href=# title="Start">
 <!--文本框显示倒计时数字-->
-<input placeholder="20" style="background:transparent;border:1px solid #ffffff;width:245px;height:140px;font-size:96px;text-align:center;font-family:Code Light;color:rgb(204,102,102);font-weight:lighter" type="text" id="txt" readonly="readonly">
-</a>
-</center>
-<center>
-<!--按钮Button-->
-<input type="button" value="Start" onClick="javascript:{this.disabled = true;timedCount()}">
+<input style="background:transparent;border:1px solid #ffffff;width:245px;height:140px;font-size:96px;text-align:center;font-family:Code Light;color:rgb(204,102,102);font-weight:lighter" type="text" id="txt" readonly="readonly">
 </center>
 </form>
 </body>

@@ -1,0 +1,30 @@
+<html>
+<head>
+<script type="text/javascript">
+function hover_on()
+{
+    var p = document.getElementById('txt')
+    p.style.color = "rgb(244,102,102)"
+}
+function hover_off()
+{
+    var p = document.getElementById('txt')
+    p.style.color = "rgb(204,102,102)" 
+}
+
+</script>
+</head>
+
+<body>
+<form>
+<center>
+<!--鼠标悬停-->
+<a href=# title="Start">
+<!--文本框显示20-->
+<input onmouseover = "hover_on()"  onmouseout = "hover_off()" style="background:transparent;border:1px solid #ffffff;width:245px;height:140px;font-size:96px;text-align:center;font-family:Code Light;color:rgb(204,102,102);font-weight:lighter" type="text" id="txt" readonly="readonly" value="20">
+</a>
+</center>
+</form>
+</body>
+
+</html>
