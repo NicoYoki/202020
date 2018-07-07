@@ -8,52 +8,51 @@ var t
 document.getElementById('txt').value = "20"
 function timedCount()
 {
- 
- min = parseInt(c / 60)
- sec = c % 60
- if(min < 10)
- {
- min = "0" + min
- }
- if(sec < 10)
- {
- sec = "0" + sec
- }
- document.getElementById('txt').value = min + ":" + sec
- c=c-1
- if(c < 0)
- {
-  c = time
-  if(confirm("Time to relax!")==1)
-  {
-   timedCountrelax()
-  }
-  return
- }
- t=setTimeout("timedCount()",1000)
+    min = parseInt(c / 60)
+    sec = c % 60
+    if(min < 10)
+    {
+        min = "0" + min
+    }
+    if(sec < 10)
+    {
+        sec = "0" + sec
+    }
+    document.getElementById('txt').value = min + ":" + sec
+    c=c-1
+    if(c < 0)
+    {
+        c = time
+        if(confirm("Time to relax!")==1)
+        {
+            timedCountrelax()
+        }
+        return
+    }
+    t=setTimeout("timedCount()",1000)
 }
 
 function timedCountrelax()
 {
- if(d < 10)
- {
- document.getElementById('txt').value= "00:" + "0" + d
- }
- else
- {
- document.getElementById('txt').value= "00:" + d
- }
- d=d-1
- if(d < 0)
- {
-  d = 5
-  if(confirm("Time to work!")==1)
-  {
-   timedCount()
-  }
-  return
- }
- t=setTimeout("timedCountrelax()",1000)
+    if(d < 10)
+    {
+        document.getElementById('txt').value= "00:" + "0" + d
+    }
+    else
+    {
+        document.getElementById('txt').value= "00:" + d
+    }
+    d=d-1
+    if(d < 0)
+    {
+        d = 5
+        if(confirm("Time to work!")==1)
+        {
+            timedCount()
+        }
+        return
+    }
+    t=setTimeout("timedCountrelax()",1000)
 }
 timedCount()
 </script>
