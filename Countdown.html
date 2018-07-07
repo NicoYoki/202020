@@ -1,0 +1,75 @@
+<html>
+<head>
+<script type="text/javascript">
+const time = 1200
+var c=time
+var d=5
+var t
+document.getElementById('txt').value = "20"
+function timedCount()
+{
+ 
+ min = parseInt(c / 60)
+ sec = c % 60
+ if(min < 10)
+ {
+ min = "0" + min
+ }
+ if(sec < 10)
+ {
+ sec = "0" + sec
+ }
+ document.getElementById('txt').value = min + ":" + sec
+ c=c-1
+ if(c < 0)
+ {
+  c = time
+  if(confirm("Time to relax!")==1)
+  {
+   timedCountrelax()
+  }
+  return
+ }
+ t=setTimeout("timedCount()",1000)
+}
+
+function timedCountrelax()
+{
+ if(d < 10)
+ {
+ document.getElementById('txt').value= "00:" + "0" + d
+ }
+ else
+ {
+ document.getElementById('txt').value= "00:" + d
+ }
+ d=d-1
+ if(d < 0)
+ {
+  d = 5
+  if(confirm("Time to work!")==1)
+  {
+   timedCount()
+  }
+  return
+ }
+ t=setTimeout("timedCountrelax()",1000)
+}
+timedCount()
+</script>
+</head>
+
+<body>
+<form>
+<center>
+<a href=# title="Start">
+<input placeholder="20" style="background:transparent;border:1px solid #ffffff;width:245px;height:140px;font-size:96px;text-align:center;font-family:Code Light;color:rgb(204,102,102);font-weight:lighter" type="text" id="txt" readonly="readonly">
+</a>
+</center>
+<center>
+<input type="button" value="Start" onClick="javascript:{this.disabled = true;timedCount()}">
+</center>
+</form>
+</body>
+
+</html>
