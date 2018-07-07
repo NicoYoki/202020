@@ -2,8 +2,9 @@
 <head>
 <script type="text/javascript">
 const time = 1200
-var c=time
-var d=5
+const relax_time = 20
+var c = time
+var d = relax_time
 var t
 document.getElementById('txt').value = "20"
 function timedCount()
@@ -45,7 +46,7 @@ function timedCountrelax()
     d=d-1
     if(d < 0)
     {
-        d = 5
+        d = relax_time
         if(confirm("Time to work!")==1)
         {
             timedCount()
