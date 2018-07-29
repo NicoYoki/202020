@@ -1,28 +1,29 @@
-<!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title></title>
-<style type="text/css">
-#div1{
-  width: 200px;
-  height: 138px;
-  border: #000 solid 1px;
-  margin: 50px auto;
-  overflow: hidden;
-}
-#div1 img{
-  cursor: pointer;
-  transition: all 0.6s;
-}
-#div1 img:hover{
-  transform: scale(1.4);
-}
-</style>
-</head>
 <body>
-<div id="div1">
-  <img src="demo.jpg" />
+<input id="btn" type="button" value=" Move It ! "/>
+<center>
+<div id="d1">
+<img id="i1" src="img/start.png" alt/>
 </div>
+</center>
 </body>
+
+<script>
+var timer=null;
+window.onload=function(){
+var odiv=document.getElementById('d1');
+var obtn=document.getElementById('btn');
+clearInterval(timer); //作用见要点①
+obtn.onclick=function(){
+timer=setInterval(function(){
+var speed=10;
+if(odiv.offsetLeft<=300){ //判断对象边距 到达指定位移则关闭定时器
+clearInterval(timer);
+}else{
+odiv.style.left=odiv.offsetLeft+speed+'px';
+}
+},30);
+}
+}
+</script>
 </html>

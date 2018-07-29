@@ -46,15 +46,48 @@ function jump(page_index)
 }         
 
 </script>
+<style type="text/css">
+    *{margin: 0;padding:0;}
+    div{
+        width:1500px;
+        height: 180px;
+        position: relative;
+    }
+    .c1{
+    position:relative;
+    -webkit-transform: translate(-100px,0px);
+    transition:transform 200ms linear; 
+    }
+    .c2{
+    }
+    img{
+        width: 100px;
+        position: absolute;
+        top: 45%;
+	left: 60%;
+       
+    }
+    
+    .avatar:hover img{
+	transform: scale(1.1);
+	transition: all 0.1s ease 0s;
+	-webkit-transform: scale(1.1);
+	-webkit-transform: all 0.1s ease 0s;
+	
+    }
+    body{
+    background-color: #FAFAFA;
+    }
+</style>
 </head>
 
 <body>
 <center>
-<input style="background:transparent;border:none;width:490px;height:180px;font-size:192px;text-align:center;font-family:Code Light; color:rgb(204,102,102);font-weight:lighter" type="text" id="txt_2" readonly="readonly" value="20">
+<input style="background:transparent;border:none;width:490px;height:180px;font-size:192px;text-align:center;font-family:'Verdana'; color:rgb(204,102,102);font-weight:lighter" type="text" id="txt_2" readonly="readonly" value="20">
 </center>
 <center>
 <!--鼠标悬停-->
-<div style="width:1300px; height:180px; line-height:180px;" onmouseover = "hover_on('start');"  onmouseout = "hover_off('start');" >
+<div style="border:none;width:1300px; height:180px; line-height:180px;" onmouseover = "hover_on('start');"  onmouseout = "hover_off('start');" >
 
 <!--文本框显示20-->
 <input style="background:transparent;border:none;width:490px;height:180px;font-size:192px;font-weight:lighter; text-align:center;font-family:Code Light; color:rgb(204,102,102);font-weight:lighter" type="text" id="txt" readonly="readonly" value="20">
@@ -65,7 +98,7 @@ function jump(page_index)
 </center>
 
 <center>
-<div style="width:1300px; height:180px; line-height:180px;" onmouseover = "hover_on('about')"  onmouseout = "hover_off('about')" >
+<div style="border:none;width:1300px; height:180px; line-height:180px;" onmouseover = "hover_on('about')"  onmouseout = "hover_off('about')" >
 <!--文本框显示20-->
 <input style="background:transparent;border:none;width:490px;height:180px;font-size:192px;text-align:center;font-family:Code Light;color:rgb(204,102,102);font-weight:lighter" type="text" id="txt_1" readonly="readonly" value="20" onclick="jump()">
 <a href=# title="About" class="avatar">
@@ -73,40 +106,5 @@ function jump(page_index)
 </a>
 </div>
 </center>
-
-<style type="text/css">
-    *{margin: 0;padding:0;}
-    div{
-        width:1500px;
-        height: 180px;
-        position: relative;
-    }
-    .c1{
-    position:absolute;
-    left: 25%;
-    }
-    .c2{
-    }
-    img{
-        width: 96px;
-        height: 55px;
-        position: absolute;
-        top: 50%;
-	left: 60%;
-        margin-top: -25px; /* 高度的一半 */
-        margin-left: -25px; /* 宽度的一半 */
-    }
-    
-    .avatar:hover img{
-	transform: scale(1.1);
-	transition: all 0.1s ease 0s;
-	-webkit-transform: scale(1.1);
-	-webkit-transform: all 0.1s ease 0s;
-    }
-    body{
-    background-color: #FAFAFA;
-    }
-</style>
-
 </body>
 </html>
