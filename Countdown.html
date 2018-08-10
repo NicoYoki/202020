@@ -2,21 +2,37 @@
 <html>
 <meta charset="utf-8">
 <head>
+	
 <style type="text/css">
     body{
-    background-color: #FAFAFA;
+        background-color: #FAFAFA;
     }
     input{
         background:transparent;
-	border:none;
-	width:490px;height:180px;
-	font-size:192px;
-	font-weight:300; 
-	font-family:'Kozuka Gothic Pro'; 
-	color:rgb(178,34,34);
-	text-align:center;
+	    border:none;
+		width:1000px;
+		height:300px;
+	    font-size:300px;
+	    font-family:'Code Light'; 
+	    color:rgb(178,34,34);
+	    text-align:center;
+		vertical-align:middle;
+		position: relative;
     }
+	.center{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
+	}
+	.box{
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	}
 </style>
+
 <script type="text/javascript">
 const time = 1200
 const relax_time = 20
@@ -71,14 +87,13 @@ function timedCountrelax()
     }
     t=setTimeout("timedCountrelax()",1000)
 }
-
 </script>
 </head>
 <!--自动执行-->
 <body onload = "javascript:{this.disabled = true;timedCount()}">
-<center>
 <!--文本框显示倒计时数字-->
-<input type="text" id="txt" readonly="readonly">
-</center>
+<div class="center">
+	<input type="text" id="txt" readonly="readonly">
+</div>
 </body>
 </html>
