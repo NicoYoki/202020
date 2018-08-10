@@ -4,8 +4,10 @@
 <meta charset="utf-8">
 <title>202020</title>
 <script type="text/javascript">
+//用于鼠标悬停后进行响应
 function hover_on(index)
 {
+    //index取start或about分别对应两个不同按钮
     if( index == 'start')
     {
     var p = document.getElementById('txt');
@@ -59,20 +61,20 @@ function jump(page_index)
         position:relative
     }
     .div-a{
-        width:1500px;
+        width:1300px;
         height: 180px;
 	top: 70px;
         position: relative;
 	z-index: -1;
     }
     .div-b{
-        width:1500px;
+        width:1300px;
         height: 180px;
         position: relative;
         z-index: 2;   
     }
     .div-c{
-        width:1500px;
+        width:1300px;
         height: 180px;
         position: relative;
 	top: -70px;
@@ -123,19 +125,19 @@ function jump(page_index)
 </head>
 
 <body>
+
 <div class="div-relative">
-
 <center>
+<!--第一个20-->
 <div class="div-a" style="border:none;width:1300px; height:180px; line-height:180px;">
+<!--文本框显示20-->
 <input type="text" id="txt_2" readonly="readonly" value="20">
-
 </div>
 </center>
 
 <center>
-<!--鼠标悬停-->
-<div class="div-b" style="border:none;width:1300px; height:180px; line-height:180px;" onmouseover = "hover_on('start');"  onmouseout = "hover_off('start');" >
-
+<!--第二个20-->
+<div class="div-b" onmouseover = "hover_on('start');"  onmouseout = "hover_off('start');" >
 <!--文本框显示20-->
 <input type="text" id="txt" readonly="readonly" value="20">
 <a href=# title="Start" class="avatar">
@@ -145,7 +147,8 @@ function jump(page_index)
 </center>
 
 <center>
-<div class = "div-c" id = "c" style="border:none;width:1300px; height:180px; line-height:180px;" onmouseover = "hover_on('about')"  onmouseout = "hover_off('about')" >
+<!--第三个20-->
+<div class = "div-c" id = "c" onmouseover = "hover_on('about')"  onmouseout = "hover_off('about')" >
 <!--文本框显示20-->
 <input type="text" id="txt_1" readonly="readonly" value="20">
 <a href=# title="About" class="avatar">
